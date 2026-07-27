@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Henfield Navigator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Henfield Storage</h1>
+        <h2>Wimbledon Unit Navigator</h2>
+    </header>
+
+    <div class="search">
+        <input
+            type="text"
+            id="unitInput"
+            placeholder="Enter unit number"
+            autocomplete="off"
+        >
+
+        <button id="findBtn">Find Unit</button>
+    </div>
+
+    <div id="message"></div>
+
+    <div id="mapContainer">
+        <img
+            id="floorPlan"
+src="Images/groundfloor.jpg"
+            alt="Wimbledon ground-floor plan"
+        >
+
+        <div id="youAreHere">YOU ARE HERE</div>
+        <div id="unitMarker"></div>
+    </div>
+
+</div>
+
+<script src="script.js?v=2"></script>
+
+</body>
+</html>

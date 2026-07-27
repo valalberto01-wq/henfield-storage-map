@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background: #f3f5f7;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #0b3d91;
+}
+
+header h2 {
+    margin: 8px 0 25px;
+    color: #666;
+    font-size: 20px;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#unitInput {
+    width: 260px;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+#unitInput:focus {
+    border-color: #0b3d91;
+    outline: none;
+}
+
+#findBtn {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    background: #0b3d91;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#findBtn:hover {
+    background: #082e70;
+}
+
+#message {
+    min-height: 25px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+#mapContainer {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    overflow: auto;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+#floorPlan {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#youAreHere {
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    padding: 7px 10px;
+    border-radius: 5px;
+    background: #0b3d91;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#unitMarker {
+    display: none;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border: 4px solid white;
+    border-radius: 50%;
+    background: red;
+    box-shadow: 0 0 0 4px rgba(255, 0, 0, 0.35);
+    transform: translate(-50%, -50%);
+    animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.3);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 8px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .search {
+        flex-direction: column;
+    }
+
+    #unitInput,
+    #findBtn {
+        width: 100%;
+    }
+}
