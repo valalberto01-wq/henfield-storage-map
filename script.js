@@ -162,6 +162,8 @@ N06: { left: 69.5, top: 70.5 },
 N04: { left: 69.5, top: 67.0 },
 };
     function findUnit() {
+    const routeLayer = document.getElementById("routeLayer");
+routeLayer.innerHTML = "";
         const unitNumber = unitInput.value.trim().toUpperCase();
 
         if (unitNumber === "") {
@@ -185,6 +187,46 @@ N04: { left: 69.5, top: 67.0 },
 unitMarker.style.left = location.left + "%";
 unitMarker.style.top = location.top + "%";
         unitMarker.style.display = "block";
+     
+  if (unitNumber === "C18") {
+    const routePoints = [
+        [11, 91],
+        [16, 87],
+        [44, 87],
+        [44, location.top],
+        [location.left, location.top]
+    ];
+
+   const mapContainer = document.getElementById("mapContainer");
+const layerWidth = mapContainer.clientWidth;
+const layerHeight = mapContainer.clientHeight;
+
+    for (let i = 0; i < routePoints.length - 1; i++) {
+        const [x1Percent, y1Percent] = routePoints[i];
+        const [x2Percent, y2Percent] = routePoints[i + 1];
+
+        const x1 = (x1Percent / 100) * layerWidth;
+        const y1 = (y1Percent / 100) * layerHeight;
+        const x2 = (x2Percent / 100) * layerWidth;
+        const y2 = (y2Percent / 100) * layerHeight;
+
+        const segment = document.createElement("div");
+        segment.className = "routeSegment";
+        segment.style.position = "absolute";
+segment.style.height = "6px";
+segment.style.background = "#0066ff";
+segment.style.borderRadius = "6px";
+segment.style.transformOrigin = "0 50%";
+segment.style.zIndex = "10000";
+        segment.style.left = x1 + "px";
+        segment.style.top = y1 + "px";
+        segment.style.width = Math.hypot(x2 - x1, y2 - y1) + "px";
+        segment.style.transform =
+            `rotate(${Math.atan2(y2 - y1, x2 - x1)}rad)`;
+
+        routeLayer.appendChild(segment);
+    }
+} 
 
         message.textContent = `Unit ${unitNumber} located.`;
         message.style.color = "#16803a";
