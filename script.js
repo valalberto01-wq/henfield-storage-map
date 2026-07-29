@@ -10,6 +10,51 @@ document.addEventListener("DOMContentLoaded", function () {
       top  = vertical position
     */
 const unitLocations = {
+    A06: { left: 16.5, top: 82.4 },
+A04: { left: 16.5, top: 86.5 },
+
+B01: { left: 20.2, top: 78.8 },
+B02: { left: 23.5, top: 78.8 },
+B03: { left: 26.8, top: 78.8 },
+B04: { left: 30.2, top: 78.8 },
+
+C01:  { left: 28.0, top: 82.4 },
+C01A: { left: 31.7, top: 82.4 },
+C01B: { left: 35.3, top: 82.4 },
+C01C: { left: 38.6, top: 80.9 },
+    B32: { left: 23.9, top: 26.8 },
+B30: { left: 23.9, top: 31.3 },
+B28: { left: 23.9, top: 35.8 },
+B26: { left: 23.9, top: 40.4 },
+B24: { left: 23.9, top: 44.9 },
+    A24: { left: 17.0, top: 21.5 },
+A29: { left: 19.3, top: 21.5 },
+A31: { left: 21.6, top: 21.5 },
+B34: { left: 23.9, top: 21.5 },
+
+A22: { left: 18.2, top: 31.0 },
+A20: { left: 18.2, top: 41.0 },
+    A17: { left: 17.0, top: 48.0 },
+    A14: { left: 19.3, top: 48.0 },
+    B19: { left: 21.6, top: 48.0 },
+    B21: { left: 23.9, top: 48.0 },
+    A30: { left: 23.2, top: 9.5 },
+    A28: { left: 18.8, top: 9.5 },
+    A27: { left: 14.3, top: 9.5 },
+    A25: { left: 8.5, top: 16.5 },
+    A23: { left: 10.5, top: 16.5 },
+    A21: { left: 9.5, top: 19.5 },
+    A19: { left: 9.5, top: 25.0 },
+    A18: { left: 9.5, top: 30.5 },
+    A16: { left: 9.5, top: 36.0 },
+    A15: { left: 9.5, top: 41.5 },
+    A13: { left: 9.5, top: 47.0 },
+    A02: { left: 9.5, top: 85.0 },
+    A03: { left: 9.5, top: 76.5 },
+    A07: { left: 9.5, top: 69.3 },
+    A09: { left: 9.5, top: 63.8 },
+    A10: { left: 9.5, top: 58.2 },
+    A12: { left: 9.5, top: 52.5 },
     C18: { left: 36.2, top: 27.5 },
     C16: { left: 36.2, top: 32.5 },
     C14: { left: 36.2, top: 37.5 },
@@ -160,6 +205,66 @@ N8A: { left: 69.5, top: 59.5 },
 N08: { left: 69.5, top: 65.0 },
 N06: { left: 69.5, top: 70.5 },
 N04: { left: 69.5, top: 67.0 },
+B36:  { left: 27.6, top: 9.5 },
+B37:  { left: 32.0, top: 9.5 },
+C25:  { left: 36.6, top: 9.5 },
+C23:  { left: 41.1, top: 9.5 },
+C21:  { left: 47.6, top: 9.5 },
+M21A: { left: 57.3, top: 9.5 },
+M23:  { left: 65.8, top: 9.5 },
+M25:  { left: 71.6, top: 9.5 },
+N21:  { left: 77.2, top: 9.5 },
+N24:  { left: 82.5, top: 9.5 },
+P25:  { left: 87.8, top: 9.5 },
+P24A: { left: 93.1, top: 9.5 },
+A15: { left: 17.4, top: 56.6 },
+B20: { left: 20.7, top: 56.6 },
+B16: { left: 23.9, top: 56.6 },
+
+A11: { left: 19.4, top: 63.3 },
+
+B14: { left: 23.9, top: 60.5 },
+B12: { left: 23.9, top: 64.3 },
+B10: { left: 23.9, top: 68.1 },
+B8:  { left: 23.9, top: 71.4 },
+
+A9B: { left: 16.9, top: 68.8 },
+A9A: { left: 16.9, top: 71.4 },
+B5A: { left: 19.6, top: 70.1 },
+B05: { left: 22.5, top: 70.1 },
+C20: { left: 30.5, top: 20.5 },
+C22: { left: 32.5, top: 20.5 },
+C24: { left: 34.6, top: 20.5 },
+C26: { left: 36.7, top: 20.5 },
+B35: { left: 38.8, top: 20.5 },
+
+B33: { left: 30.5, top: 25.5 },
+B31: { left: 30.5, top: 29.4 },
+B29: { left: 30.5, top: 33.3 },
+B27: { left: 30.5, top: 37.3 },
+B25: { left: 30.5, top: 41.2 },
+B23: { left: 30.5, top: 45.1 },
+
+C16: { left: 36.5, top: 33.3 },
+C14: { left: 36.5, top: 38.6 },
+C12: { left: 36.5, top: 44.0 },
+
+C10: { left: 31.3, top: 48.8 },
+C08: { left: 34.6, top: 48.8 },
+C06: { left: 38.3, top: 48.8 },
+B17: { left: 30.8, top: 56.7 },
+C09: { left: 34.4, top: 56.7 },
+C07: { left: 38.0, top: 56.7 },
+
+B13: { left: 30.8, top: 60.9 },
+B11: { left: 30.8, top: 65.1 },
+B09: { left: 30.8, top: 69.2 },
+B7:  { left: 30.8, top: 72.2 },
+
+C04: { left: 35.9, top: 62.5 },
+C02: { left: 35.9, top: 69.5 },
+P23A:  { left: 92.8, top: 15.5 },
+P23:   { left: 94.8, top: 15.5 },
 };
     function findUnit() {
     const routeLayer = document.getElementById("routeLayer");
@@ -188,14 +293,188 @@ unitMarker.style.left = location.left + "%";
 unitMarker.style.top = location.top + "%";
         unitMarker.style.display = "block";
      
-  if (unitNumber === "C18") {
-    const routePoints = [
-        [11, 91],
-        [16, 87],
-        [44, 87],
+  {
+   let routePoints;
+
+const topRowUnits = [
+    "A27", "A28", "A30", "B36", "B37", "C25",
+    "C23", "C21", "M21A", "M23", "M25",
+    "N21", "N24", "P25", "P24A"
+];
+const rightTopRowUnits = ["N21", "N24", "P25", "P24A"];
+if (rightTopRowUnits.includes(unitNumber)) {
+    routePoints = [
+        [51, 80],
+        [60, 82],
+        [76, 82],
+        [76, 15],
+        [location.left, 15],
+        [location.left, location.top]
+    ];
+} else if (["M21A", "M23", "M25"].includes(unitNumber)) {
+    routePoints = [
+        [51, 80],
+        [60, 82],
+        [60, 15],
+        [location.left, 15],
+        [location.left, location.top]
+    ];
+} else if (topRowUnits.includes(unitNumber)) {
+    routePoints = [
+        [51, 80],
+        [44, 82],
+[44, 15],
+        [location.left, 15],
+        [location.left, location.top]
+        ];
+       } else if (["A24", "A29", "A31", "B34"].includes(unitNumber)) {
+    routePoints = [
+        [51, 80],
+        [44, 82],
+        [44, 15],
+        [location.left, 15],
+        [location.left, location.top]
+    ];
+} else if (["B32", "B30", "B28", "B26", "B24"].includes(unitNumber)) {
+    routePoints = [
+        [51, 80],
+        [44, 82],
+        [44, 52],
+        [26, 52],
+        [26, location.top],
+        [location.left, location.top]
+    ];
+} else if (["A17", "A14", "B19", "B21"].includes(unitNumber)) {
+    routePoints = [
+    [51, 80],
+    [44, 82],
+    [44, 52],
+    [location.left, 52],
+    [location.left, location.top]
+];
+   
+} else if (["A15", "B20", "B16"].includes(unitNumber)) {
+    routePoints = [
+        [51, 80],
+        [44, 82],
+        [44, 52],
+        [location.left, 52],
+        [location.left, location.top]
+    ];
+} else if (["B14", "B12", "B10", "B8"].includes(unitNumber)) {
+    routePoints = [
+        [51, 80],
+        [51, 74],
+        [26, 74],
+        [26, location.top],
+        [location.left, location.top]
+    ];
+} else if (["A9B", "A9A", "B5A", "B05"].includes(unitNumber)) {
+    routePoints = [
+        [51, 80],
+        [51, 74],
+        [location.left, 74],
+        [location.left, location.top]
+    ];
+    } else if (["C22", "C24", "C26", "B35"].includes(unitNumber)) {
+    routePoints = [
+        [51, 80],
+        [44, 82],
+        [44, 15],
+        [location.left, 15],
+        [location.left, location.top]
+    ];
+} else if (["B33", "B31", "B29", "B27", "B25", "B23"].includes(unitNumber)) {
+    routePoints = [
+        [51, 80],
+        [44, 82],
+        [44, 52],
+        [28, 52],
+        [28, location.top],
+        [location.left, location.top]
+    ];
+} else if (["C16", "C14", "C12"].includes(unitNumber)) {
+    routePoints = [
+        [51, 80],
+        [44, 82],
         [44, location.top],
         [location.left, location.top]
     ];
+} else if (["C10", "C08", "C06"].includes(unitNumber)) {
+    routePoints = [
+        [51, 80],
+        [44, 82],
+        [44, 52],
+        [location.left, 52],
+        [location.left, location.top]
+    ];
+} else if (["B17", "C09", "C07"].includes(unitNumber)) {
+    routePoints = [
+        [51, 80],
+        [44, 82],
+        [44, 52],
+        [location.left, 52],
+        [location.left, location.top]
+    ];
+} else if (["B13", "B11", "B09", "B7"].includes(unitNumber)) {
+    routePoints = [
+        [51, 80],
+        [51, 74],
+        [28, 74],
+        [28, location.top],
+        [location.left, location.top]
+    ];
+} else if (["C04", "C02"].includes(unitNumber)) {
+    routePoints = [
+        [51, 80],
+        [44, 82],
+        [44, location.top],
+        [location.left, location.top]
+    ];
+} else if (unitNumber.startsWith("A")) {
+    routePoints = [
+        [51, 80],
+ [51, 74],
+[15, 74],
+     [15, location.top],
+        [location.left, location.top]
+    ];
+} else if (unitNumber.startsWith("N")) {
+   routePoints = [
+    [51, 80],
+    [60, 82],
+    [71, 82],
+    [71, location.top],
+    [location.left, location.top]
+];
+} else {
+    const aisleX = unitNumber === "C18" ? 44 : 60;
+
+    routePoints = [
+    [51, 80],
+    [aisleX, 82],
+    [aisleX, location.top],
+    [location.left, location.top]
+];
+}
+
+if (["B01", "B02", "B03", "B04"].includes(unitNumber)) {
+    routePoints = [
+        [51, 80],
+        [51, 74],
+        [location.left, 74],
+        [location.left, location.top]
+    ];
+} else if (["C01", "C01A", "C01B", "C01C"].includes(unitNumber)) {
+    routePoints = [
+        [51, 80],
+        [51, 88],
+        [location.left, 88],
+        [location.left, location.top]
+    ];
+} else if (unitNumber.startsWith("A")) {
+    
+}
 
    const mapContainer = document.getElementById("mapContainer");
 const layerWidth = mapContainer.clientWidth;
