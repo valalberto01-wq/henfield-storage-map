@@ -268,6 +268,14 @@ P23:   { left: 94.8, top: 15.5 },
 };
     function findUnit() {
     const routeLayer = document.getElementById("routeLayer");
+    const hideRouteBtn = document.getElementById("hideRouteBtn");
+
+hideRouteBtn.style.display = "none";
+
+hideRouteBtn.onclick = function () {
+    routeLayer.innerHTML = "";
+    hideRouteBtn.style.display = "none";
+};
 routeLayer.innerHTML = "";
         const unitNumber = unitInput.value.trim().toUpperCase();
 
@@ -288,6 +296,7 @@ routeLayer.innerHTML = "";
             unitMarker.style.display = "none";
             return;
         }
+        hideRouteBtn.style.display = "block";
 
 unitMarker.style.left = location.left + "%";
 unitMarker.style.top = location.top + "%";

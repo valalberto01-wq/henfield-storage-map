@@ -159,11 +159,58 @@ header h2 {
 
 .routeSegment {
     position: absolute;
-    height: 5px;
-    background: #0066ff;
-    border-radius: 5px;
+    height: 3px;
+    background: repeating-linear-gradient(
+        90deg,
+        #0066ff 0 10px,
+        transparent 10px 16px
+    );
+    border-radius: 1px;
     transform-origin: 0 50%;
     z-index: 100;
+    animation: routeFlow 0.8s linear infinite;
+}
+
+@keyframes routeFlow {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 32px 0;
+    }
+}
+.routeSegment::after {
+    content: "➜";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    color: #0066ff;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+    transform: translateY(-50%);
+    animation: routeArrow 1.4s linear infinite;
+}
+
+@keyframes routeArrow {
+    from {
+        left: 0;
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    to {
+        left: calc(100% - 14px);
+        opacity: 0;
+    }
 }
 
 #youAreHere,
@@ -304,4 +351,19 @@ header h2 {
       0 6px 0 #082c68,
       0 15px 24px rgba(0, 0, 0, 0.24);
   }
+}
+#hideRouteBtn {
+    display: none;
+    margin: 10px auto 0;
+    padding: 9px 18px;
+    border: 2px solid #0b3d91;
+    border-radius: 8px;
+    background: white;
+    color: #0b3d91;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#hideRouteBtn:hover {
+    background: #eef4ff;
 }
