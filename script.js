@@ -55,7 +55,7 @@ A20: { left: 18.2, top: 41.0 },
     A09: { left: 9.5, top: 63.8 },
     A10: { left: 9.5, top: 58.2 },
     A12: { left: 9.5, top: 52.5 },
-    C18: { left: 36.2, top: 27.5 },
+  C18: { left: 36.2, top: 22.5 },
     C16: { left: 36.2, top: 32.5 },
     C14: { left: 36.2, top: 37.5 },
     C12: { left: 36.2, top: 43.0 },
@@ -460,10 +460,10 @@ if (rightTopRowUnits.includes(unitNumber)) {
     const aisleX = unitNumber === "C18" ? 44 : 60;
 
     routePoints = [
-    [[51, 80]],
-    [aisleX, 82],
-    [aisleX, location.top],
-    [location.left, location.top]
+  [51, 72],
+[aisleX, 72],
+[aisleX, location.top],
+[location.left, location.top]
 ];
 }
 
