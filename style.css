@@ -285,3 +285,23 @@ header h2 {
   height: auto;
   margin: 0 auto;
 }
+#mapContainer {
+  transform: perspective(900px) rotateX(12deg) rotateZ(-0.6deg);
+  transform-origin: top center;
+  border: 4px solid #0b3d91;
+  border-radius: 10px;
+  background: #eef2f5;
+  box-shadow:
+    0 10px 0 #082c68,
+    0 24px 35px rgba(0, 0, 0, 0.28);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  #mapContainer {
+    transform: perspective(800px) rotateX(8deg) rotateZ(-0.4deg);
+    box-shadow:
+      0 6px 0 #082c68,
+      0 15px 24px rgba(0, 0, 0, 0.24);
+  }
+}
