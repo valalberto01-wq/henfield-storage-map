@@ -313,7 +313,7 @@ const topRowUnits = [
 const rightTopRowUnits = ["N21", "N24", "P25", "P24A"];
 if (rightTopRowUnits.includes(unitNumber)) {
     routePoints = [
-        [51, 80],
+        [[51, 80]],
         [60, 82],
         [76, 82],
         [76, 15],
@@ -322,7 +322,7 @@ if (rightTopRowUnits.includes(unitNumber)) {
     ];
 } else if (["M21A", "M23", "M25"].includes(unitNumber)) {
     routePoints = [
-        [51, 80],
+        [[51, 80]],
         [60, 82],
         [60, 15],
         [location.left, 15],
@@ -330,7 +330,7 @@ if (rightTopRowUnits.includes(unitNumber)) {
     ];
 } else if (topRowUnits.includes(unitNumber)) {
     routePoints = [
-        [51, 80],
+        [[51, 80]],
         [44, 82],
 [44, 15],
         [location.left, 15],
@@ -338,7 +338,7 @@ if (rightTopRowUnits.includes(unitNumber)) {
         ];
        } else if (["A24", "A29", "A31", "B34"].includes(unitNumber)) {
     routePoints = [
-        [51, 80],
+        [[51, 80]],
         [44, 82],
         [44, 15],
         [location.left, 15],
@@ -346,7 +346,7 @@ if (rightTopRowUnits.includes(unitNumber)) {
     ];
 } else if (["B32", "B30", "B28", "B26", "B24"].includes(unitNumber)) {
     routePoints = [
-        [51, 80],
+        [[51, 80]],
         [44, 82],
         [44, 52],
         [26, 52],
@@ -355,7 +355,7 @@ if (rightTopRowUnits.includes(unitNumber)) {
     ];
 } else if (["A17", "A14", "B19", "B21"].includes(unitNumber)) {
     routePoints = [
-    [51, 80],
+    [[51, 80]],
     [44, 82],
     [44, 52],
     [location.left, 52],
@@ -364,7 +364,7 @@ if (rightTopRowUnits.includes(unitNumber)) {
    
 } else if (["A15", "B20", "B16"].includes(unitNumber)) {
     routePoints = [
-        [51, 80],
+        [[51, 80]],
         [44, 82],
         [44, 52],
         [location.left, 52],
@@ -372,7 +372,7 @@ if (rightTopRowUnits.includes(unitNumber)) {
     ];
 } else if (["B14", "B12", "B10", "B8"].includes(unitNumber)) {
     routePoints = [
-        [51, 80],
+        [[51, 80]],
         [51, 74],
         [26, 74],
         [26, location.top],
@@ -380,14 +380,14 @@ if (rightTopRowUnits.includes(unitNumber)) {
     ];
 } else if (["A9B", "A9A", "B5A", "B05"].includes(unitNumber)) {
     routePoints = [
-        [51, 80],
+        [[51, 80]],
         [51, 74],
         [location.left, 74],
         [location.left, location.top]
     ];
     } else if (["C22", "C24", "C26", "B35"].includes(unitNumber)) {
     routePoints = [
-        [51, 80],
+        [[51, 80]],
         [44, 82],
         [44, 15],
         [location.left, 15],
@@ -395,7 +395,7 @@ if (rightTopRowUnits.includes(unitNumber)) {
     ];
 } else if (["B33", "B31", "B29", "B27", "B25", "B23"].includes(unitNumber)) {
     routePoints = [
-        [51, 80],
+        [[51, 80]],
         [44, 82],
         [44, 52],
         [28, 52],
@@ -404,14 +404,14 @@ if (rightTopRowUnits.includes(unitNumber)) {
     ];
 } else if (["C16", "C14", "C12"].includes(unitNumber)) {
     routePoints = [
-        [51, 80],
+        [[51, 80]],
         [44, 82],
         [44, location.top],
         [location.left, location.top]
     ];
 } else if (["C10", "C08", "C06"].includes(unitNumber)) {
     routePoints = [
-        [51, 80],
+        [[51, 80]],
         [44, 82],
         [44, 52],
         [location.left, 52],
@@ -419,7 +419,7 @@ if (rightTopRowUnits.includes(unitNumber)) {
     ];
 } else if (["B17", "C09", "C07"].includes(unitNumber)) {
     routePoints = [
-        [51, 80],
+        [[51, 80]],
         [44, 82],
         [44, 52],
         [location.left, 52],
@@ -427,7 +427,7 @@ if (rightTopRowUnits.includes(unitNumber)) {
     ];
 } else if (["B13", "B11", "B09", "B7"].includes(unitNumber)) {
     routePoints = [
-        [51, 80],
+        [[51, 80]],
         [51, 74],
         [28, 74],
         [28, location.top],
@@ -435,14 +435,14 @@ if (rightTopRowUnits.includes(unitNumber)) {
     ];
 } else if (["C04", "C02"].includes(unitNumber)) {
     routePoints = [
-        [51, 80],
+        [[51, 80]],
         [44, 82],
         [44, location.top],
         [location.left, location.top]
     ];
 } else if (unitNumber.startsWith("A")) {
     routePoints = [
-        [51, 80],
+        [[51, 80]],
  [51, 74],
 [15, 74],
      [15, location.top],
@@ -450,7 +450,7 @@ if (rightTopRowUnits.includes(unitNumber)) {
     ];
 } else if (unitNumber.startsWith("N")) {
    routePoints = [
-    [51, 80],
+    [[51, 80]],
     [60, 82],
     [71, 82],
     [71, location.top],
@@ -460,7 +460,7 @@ if (rightTopRowUnits.includes(unitNumber)) {
     const aisleX = unitNumber === "C18" ? 44 : 60;
 
     routePoints = [
-    [51, 80],
+    [[51, 80]],
     [aisleX, 82],
     [aisleX, location.top],
     [location.left, location.top]
@@ -469,14 +469,14 @@ if (rightTopRowUnits.includes(unitNumber)) {
 
 if (["B01", "B02", "B03", "B04"].includes(unitNumber)) {
     routePoints = [
-        [51, 80],
+        [[51, 80]],
         [51, 74],
         [location.left, 74],
         [location.left, location.top]
     ];
 } else if (["C01", "C01A", "C01B", "C01C"].includes(unitNumber)) {
     routePoints = [
-        [51, 80],
+        [[51, 80]],
         [51, 88],
         [location.left, 88],
         [location.left, location.top]
